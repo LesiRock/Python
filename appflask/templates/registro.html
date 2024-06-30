@@ -1,0 +1,19 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro</title>
+    </head>
+    <body>
+        <h1>REGISTRATE</h1>
+        <form method="post"></form>
+            {{ form.hidden_tag()}}
+            <p>{{ form.nombre.label }} {{ form.nombre }}</p>
+            <p>{{ form.edad.label }} {{ form.edad }}</p>
+            <p>{{ form.email.label }} {{ form.email }}</p>
+            <p>{{ form.contrasena.label }} {{ form.contrasena }}</p>
+            <p>{{ form.enviar }}</p>
+        </form>
+    </body>
+    </html>
