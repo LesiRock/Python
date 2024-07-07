@@ -1,8 +1,18 @@
 from flask import Flask, render_template
 from formulario import PersonaForm
 
+from flask_mysqldb import MySQL
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'tu_palabra_secreta'
+
+mysql = MySQL()
+
+app.config['MYSQL_DATABASE_USER'] = 'tu_usuario'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'tu_contraseña'
+app.config['MYSQL_DATABASE_DB'] = 'nombre_de_tu_base_de_datos'
+app.config['MYSQL_DATABASE_HOST'] = 'localhost'#para configurar una base de datos local
+#usuario, contraseña y la ruta que de el proveedor
 
 @app.route('/')
 def inicio ():
