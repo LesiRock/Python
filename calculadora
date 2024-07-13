@@ -1,1 +1,53 @@
+def menu():
+    print("Menu de operaciones")
+    print("1.Suma")
+    print("2.Resta")
+    print("3.Multiplicacion")
+    print("4.Division")
+    print("5.Salir")
+    op = int(input("Ingresa numero de operacion"))
+    if op == 1:
+        suma()
+    elif op == 2:
+        resta()
+    elif op == 3:
+        multiplicacion()
+    elif op == 4:
+        division()
+    elif op== 5:
+        exit()
+    else: 
+        print("Opcion invalida")
+
+def solicitar():
+    num1 = int(input("Ingresa el primer numero"))
+    num2 = int(input("Ingresa el segundo numero"))
+    return num1,num2 #Son variables locales solo para esta funcion
+
+def suma():
+    print("Operacion suma")
+    print(" ")
+    num1,num2 = solicitar() #en la variable num1 guarad el primer numero y en num2 el segundo y se puedan usar las variables locales
+    print("RESULTADO: ", num1+num2)
+
+def resta():
+    print("Operacion resta")
+    print(" ")
+    num1,num2 = solicitar()
+    print("RESULTADO: ", num1-num2)
+
+def multiplicacion():
+    print("Operacion multiplicacion")
+    print(" ")
+    num1,num2 = solicitar()
+    print("RESULTADO: ", num1*num2)
+
+def division():
+    print("Operacion division")
+    print(" ")
+    num1,num2 = solicitar()
+    print("RESULTADO: ", num1/num2)
+
+while True:
+    menu()
 
